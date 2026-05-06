@@ -1,34 +1,74 @@
-# WhatsApp iOS Forensic Framework
+# WhatsApp Forensic Analysis from Encrypted iOS Backup
 
-## Overview
-This project presents a forensic framework for extracting and reconstructing WhatsApp artifacts from encrypted iOS backups. The framework focuses on converting raw forensic data into structured and readable communication records for digital forensic investigations.
+## Project Overview
 
-## Objectives
-- Extract WhatsApp artifacts from encrypted iOS backups
-- Convert Apple timestamps into readable timestamps
-- Organize message records chronologically
-- Improve forensic data interpretation
+This project presents a digital forensic framework for extracting and analyzing WhatsApp artifacts from encrypted iOS backups.
 
-## Technologies Used
+The framework focuses on transforming raw forensic records into structured and interpretable information to support digital forensic investigations.
+
+---
+
+## Tools Used
+
+- iBackup Viewer
+- DB Browser for SQLite
 - Python
 - Google Colab
-- SQLite
-- Pandas
-- Matplotlib
 
-## Project Structure
-- `code/` : Python scripts and notebooks
-- `screenshots/` : Result screenshots and generated graphs
-- `requirements.txt` : Required Python libraries
+---
+
+## Dataset Description
+
+The dataset used in this research was obtained from an encrypted iOS backup for forensic analysis purposes.
+
+Due to privacy and ethical considerations, the original WhatsApp database is not publicly available.
+
+The extracted artifacts include:
+- Message content (ZTEXT)
+- Message timestamps (ZMESSAGEDATE)
+- Sender and receiver identifiers
+
+---
+
+## Methodology
+
+The framework follows these steps:
+
+1. Extract encrypted iOS backup
+2. Locate WhatsApp database
+3. Open SQLite database
+4. Execute SQL queries
+5. Convert Apple timestamps into Unix timestamps
+6. Organize messages chronologically
+7. Generate timeline visualization
+
+---
 
 ## Results
-The framework successfully reconstructed WhatsApp message timelines and organized extracted records into readable chronological structures.
 
-## Data Availability
-Due to privacy and ethical considerations, the original forensic data and backups are not publicly shared.
+### Structured WhatsApp Messages
 
-## GitHub Repository
-Add your repository link here.
+![Structured Messages](results/figures/table.png)
 
-## DOI
-Add your DOI link here after generating it from Zenodo.
+### Message Timeline Visualization
+
+![Timeline](results/figures/timeline.png)
+
+---
+
+## Key Contributions
+
+- Developed a forensic framework for WhatsApp artifact reconstruction
+- Converted Apple timestamps into human-readable format
+- Organized forensic artifacts chronologically
+- Improved forensic data readability and interpretation
+
+---
+
+## Reproducibility
+
+To reproduce the results:
+
+```bash
+pip install -r requirements.txt
+python src/timestamp_conversion.py
