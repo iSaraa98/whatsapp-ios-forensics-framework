@@ -10,9 +10,10 @@ This project presents a forensic framework for extracting and reconstructing Wha
 - Improve forensic data interpretation
 
 ## Technologies Used
+- iBackup Viewer
+- DB Browser for SQLite
 - Python
 - Google Colab
-- SQLite
 - Pandas
 - Matplotlib
 
